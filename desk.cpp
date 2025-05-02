@@ -5,58 +5,31 @@ using namespace std;
 class Desk
 {
 public:
-	void setW(int w)
+	Desk(int w, int l, int h, string shape)
 	{
 		m_W = w;
-	}
-	int getW()
-	{
-		return m_W;
-	}
-	void setL(int l)
-	{
 		m_L = l;
-	}
-	int getL()
-	{
-		return m_L;
-	}
-	void setH(int h)
-	{
 		m_H = h;
-	}
-	int getH()
-	{
-		return m_H;
-	}
-	int getS()
-	{
-		return m_L*m_W;
-	}
-	void setShape(string shape)
-	{
 		m_shape = shape;
 	}
-    string getshape()
-	{
-		return m_shape;
-	}
-private:
 	int m_W;
 	int m_L;
 	int m_H;
 	string m_shape;
-};
+}; 
+
+void Desk1()
+{
+	Desk d(100, 100, 80, "方形");
+	cout << "宽是：" << d.m_W << endl;
+	cout << "长是：" << d.m_L << endl;
+	cout << "高是：" << d.m_H << endl;
+	cout << "形状是：" << d.m_shape << endl;
+}
+
 
 int main()
 {
-	Desk d1;
-	d1.setW(100);
-	d1.setL(100);
-	d1.setH(80);
-	d1.setShape("方形");
-
-
-	cout << "d1的面积为：" << d1.getS() << "  形状是：" << d1.getshape() << endl;
+	Desk1();
 }
 
